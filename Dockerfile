@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM ismael49/wireguardbase:v1
 
 LABEL org.opencontainers.image.authors="Jonathan Ilias-Pillet <ismael@chouppy.net>"
 
@@ -10,9 +10,7 @@ RUN \
 apt-get update && \
 apt-get install -y locales tzdata && \
 localedef -i fr_FR -c -f UTF-8 -A /usr/share/locale/locale.alias fr_FR.UTF-8 && \
-apt-get install -y tini \
-                   dnsmasq \
-                   wireguard iproute2 openresolv && \
+apt-get install -y dnsmasq && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/* 
 

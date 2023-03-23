@@ -3,7 +3,7 @@ version: '2.2'
 services:
   dnsmasq:
     build: .
-    image: ismael49/dnsmasq:v1
+    image: ismael49/dnsmasq:v2
     cap_add:
       - NET_ADMIN
     volumes:
